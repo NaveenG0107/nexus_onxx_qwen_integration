@@ -33,10 +33,10 @@ build/
 *.egg-info/
 
 # Large Model files & Cache
-models/
-src/models/
-*.onnx
-*.onnx_data
+# models/
+# src/models/
+# *.onnx
+# *.onnx_data
 *.zip
 .cache/
 *.xlsx
