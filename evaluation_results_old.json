@@ -1,0 +1,155 @@
+{
+  "model_used": "qwen2.5-0.5b-onnx",
+  "api_url": "http://localhost:8000/api/v1/chat",
+  "total_questions": 16,
+  "total_matched": 0,
+  "accuracy_percentage": 0.0,
+  "total_execution_time_seconds": 412.4923,
+  "avg_execution_time_per_question_seconds": 25.7808,
+  "results": [
+    {
+      "id": "test_01",
+      "prompt": "Create a table named customer.",
+      "expected_sql": "CREATE TABLE customer (id INTEGER PRIMARY KEY);",
+      "llm_response": "Sure, I can help you create a table named \"customer\". Here's how you can create it:\n\n```sql\nCREATE TABLE customer (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(50) NOT NULL,\n    email VARCHAR(50) NOT NULL,\n    phone VARCHAR(20) NOT NULL,\n    address VARCHAR(100) NOT NULL,\n    city VARCHAR",
+      "execution_time_seconds": 54.4084,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_02",
+      "prompt": "Create an employee table with an integer employee_id, a varchar name of length 100, and an integer age.",
+      "expected_sql": "CREATE TABLE employee (employee_id INTEGER PRIMARY KEY, name VARCHAR(100), age INTEGER);",
+      "llm_response": "Sure, I can help you create an employee table in SQL. Below is the SQL code to create the `employee` table with the specified columns:\n\n```sql\nCREATE TABLE employee (\n    employee_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    age INT\n);\n```\n\nThis SQL statement creates a table named `employee` with three columns: `employee_id`, `name`,",
+      "execution_time_seconds": 30.278,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_03",
+      "prompt": "Create a product table with product_id as the primary key, product_name as a required varchar of length 150, and price as a decimal with 10 digits and 2 decimal places.",
+      "expected_sql": "CREATE TABLE product (product_id INTEGER PRIMARY KEY, product_name VARCHAR(150) NOT NULL, price DECIMAL(10, 2));",
+      "llm_response": "Sure, here is the SQL statement to create the product table with the specified columns and constraints:\n\n```sql\nCREATE TABLE Product (\n    product_id INT PRIMARY KEY,\n    product_name VARCHAR(150) NOT NULL,\n    price DECIMAL(10, 2) NOT NULL\n);\n```\n\nThis SQL statement creates a table named `Product` with columns `product_id`, `product",
+      "execution_time_seconds": 24.1577,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_04",
+      "prompt": "Create an orders table with order_id as the primary key, status as varchar(20) defaulting to pending, and created_at as a timestamp defaulting to the current timestamp.",
+      "expected_sql": "CREATE TABLE orders (order_id INTEGER PRIMARY KEY, status VARCHAR(20) DEFAULT 'pending', created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);",
+      "llm_response": "Sure, I can help you create the `orders` table with the specified columns and constraints. Here is the SQL code to create the `orders` table:\n\n```sql\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY AUTO_INCREMENT,\n    status VARCHAR(20) DEFAULT 'pending',\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n```\n\nThis SQL statement creates a table named `orders`",
+      "execution_time_seconds": 23.9257,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_05",
+      "prompt": "Create a users table with user_id as the primary key, email as a unique varchar of length 255, and username as a required varchar of length 50.",
+      "expected_sql": "CREATE TABLE users (user_id INTEGER PRIMARY KEY, email VARCHAR(255) UNIQUE, username VARCHAR(50) NOT NULL);",
+      "llm_response": "Sure, here is the SQL code to create the `users` table with the specified columns:\n\n```sql\nCREATE TABLE users (\n    user_id INT PRIMARY KEY AUTO_INCREMENT,\n    email VARCHAR(255) NOT NULL UNIQUE,\n    username VARCHAR(50) NOT NULL UNIQUE\n);\n```\n\nThis SQL statement creates a table named `users` with three columns: `user_id`, `",
+      "execution_time_seconds": 22.364,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_06",
+      "prompt": "Create an enrollment table with student_id and course_id as a composite primary key, and enrolled_at as a timestamp.",
+      "expected_sql": "CREATE TABLE enrollment (student_id INTEGER, course_id INTEGER, enrolled_at TIMESTAMP, PRIMARY KEY (student_id, course_id));",
+      "llm_response": "Sure, I can help you create an enrollment table with the columns you specified. However, I need to clarify that you are asking for a specific table structure, not a table creation itself. Could you please provide more details on the table structure you want to create? Here are some common table structures:\n\n1. **Student**:\n   - Student ID (Primary Key)\n   - Name\n   -",
+      "execution_time_seconds": 21.193,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_07",
+      "prompt": "Create a department table with department_id as the primary key and department_name as varchar(100). Create an employee table with employee_id as the primary key, employee_name as varchar(100), and department_id as a foreign key referencing department.department_id.",
+      "expected_sql": "CREATE TABLE department (department_id INTEGER PRIMARY KEY, department_name VARCHAR(100));\nCREATE TABLE employee (employee_id INTEGER PRIMARY KEY, employee_name VARCHAR(100), department_id INTEGER, FOREIGN KEY (department_id) REFERENCES department(department_id));",
+      "llm_response": "To create a department table with the specified structure, you can use the following SQL command:\n\n```sql\nCREATE TABLE department (\n    department_id INT PRIMARY KEY,\n    department_name VARCHAR(100)\n);\n\nCREATE TABLE employee (\n    employee_id INT PRIMARY KEY,\n    employee_name VARCHAR(100),\n    department_id INT,\n    FOREIGN KEY (department_id) REFERENCES department(department_id)\n",
+      "execution_time_seconds": 27.4195,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_08",
+      "prompt": "Create categories and products tables. Each category has a category_id primary key and name. Each product has a product_id primary key, product_name, and category_id referencing categories.category_id.",
+      "expected_sql": "CREATE TABLE categories (category_id INTEGER PRIMARY KEY, name VARCHAR(100));\nCREATE TABLE products (product_id INTEGER PRIMARY KEY, product_name VARCHAR(150), category_id INTEGER, FOREIGN KEY (category_id) REFERENCES categories(category_id));",
+      "llm_response": "Sure, I can help you create the tables and relationships you described. Below is the SQL code to create the tables and relationships:\n\n```sql\nCREATE TABLE categories (\n    category_id INT PRIMARY KEY AUTO_INCREMENT,\n    category_name VARCHAR(50) NOT NULL\n);\n\nCREATE TABLE products (\n    product_id INT PRIMARY KEY AUTO_INCREMENT,\n    product_name VARCHAR(50) NOT NULL,\n    category",
+      "execution_time_seconds": 18.0197,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_09",
+      "prompt": "Add a phone column of type varchar(20) to the customer table. Return the complete updated schema as CREATE statements only.",
+      "expected_sql": "CREATE TABLE customer (id INTEGER PRIMARY KEY, phone VARCHAR(20));",
+      "llm_response": "Certainly! Below are the SQL statements to add a phone column of type `varchar(20)` to the `customer` table. Note that the `phone` column is not directly supported by most databases, so we will use a combination of `varchar` and `char` to represent the phone number.\n\n```sql\nALTER TABLE customer ADD COLUMN phone VARCHAR(20) NOT NULL;\n\nALTER",
+      "execution_time_seconds": 24.8037,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_10",
+      "prompt": "Change the employee table's name column to varchar(150). Return the complete updated schema as CREATE statements only.",
+      "expected_sql": "CREATE TABLE employee (employee_id INTEGER PRIMARY KEY, name VARCHAR(150), age INTEGER);",
+      "llm_response": "Certainly! Below are the SQL statements to change the column name from `VARCHAR(150)` to `VARCHAR(255)` in the `employee` table. Note that the `VARCHAR(150)` is a reserved word in SQL, so we will use `VARCHAR(255)` instead.\n\n```sql\nALTER TABLE employee \nALTER COLUMN column_name VARCHAR(25",
+      "execution_time_seconds": 24.1201,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_11",
+      "prompt": "Create an employee table with employee_id as the primary key, name as varchar(100), and department_id as an integer. Add an index on department_id.",
+      "expected_sql": "CREATE TABLE employee (employee_id INTEGER PRIMARY KEY, name VARCHAR(100), department_id INTEGER);\nCREATE INDEX idx_employee_department ON employee(department_id);",
+      "llm_response": "To create an employee table with the specified structure and constraints, you can use the following SQL command:\n\n```sql\nCREATE TABLE Employee (\n    Employee_id INT PRIMARY KEY,\n    Name VARCHAR(100),\n    Department_id INT,\n    FOREIGN KEY (Department_id) REFERENCES Department(Department_id)\n);\n```\n\nThis command creates a table named `Employee` with columns for `Employee_id`,",
+      "execution_time_seconds": 21.5845,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_12",
+      "prompt": "Create an orders table with order_id as the primary key and status as an enum with pending, processing, and completed values.",
+      "expected_sql": "CREATE TYPE order_status AS ENUM ('pending', 'processing', 'completed');\nCREATE TABLE orders (order_id INTEGER PRIMARY KEY, status order_status);",
+      "llm_response": "Sure, I can help you create the `orders` table with the specified columns and data types. Here is the SQL code to create the `orders` table:\n\n```sql\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY AUTO_INCREMENT,\n    status ENUM('pending', 'processing', 'completed') NOT NULL DEFAULT 'pending'\n);\n```\n\nThis SQL statement creates a table named `orders`",
+      "execution_time_seconds": 27.8683,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_13",
+      "prompt": "Rename the employee table to staff. Return the complete updated schema as CREATE statements only.",
+      "expected_sql": "CREATE TABLE staff (employee_id INTEGER PRIMARY KEY, name VARCHAR(100), age INTEGER);",
+      "llm_response": "Certainly! Below are the SQL statements to rename the employee table to `staff`. Please note that this operation will be performed in the `staff` schema.\n\n```sql\nALTER TABLE `employee` RENAME TO `staff`;\n```\n\nThis command will rename the `employee` table to `staff`.",
+      "execution_time_seconds": 17.47,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_14",
+      "prompt": "Drop the address column from the customer table. Return the complete updated schema as CREATE statements only.",
+      "expected_sql": "CREATE TABLE customer (id INTEGER PRIMARY KEY, name VARCHAR(100));",
+      "llm_response": "Certainly! Below are the SQL statements to drop the `address` column from the `customer` table and update the schema accordingly.\n\n```sql\n-- Drop the address column from the customer table\nALTER TABLE customer DROP COLUMN address;\n\n-- Update the schema to reflect the changes\nALTER TABLE customer ADD COLUMN address VARCHAR(255);\n\n-- Drop the address column from the customer table again\nALTER TABLE",
+      "execution_time_seconds": 22.2181,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_15",
+      "prompt": "Create an employee table with employee_id as the primary key, name as varchar(100), and department_id as an integer. Add a relationship to the existing department table using department_id.",
+      "expected_sql": "CREATE TABLE employee (employee_id INTEGER PRIMARY KEY, name VARCHAR(100), department_id INTEGER, FOREIGN KEY (department_id) REFERENCES department(department_id));",
+      "llm_response": "To create the employee table with the specified structure, you can use the following SQL query:\n\n```sql\nCREATE TABLE employee (\n    employee_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    department_id INT,\n    -- Add other columns as needed\n    -- relationship to department table\n    -- relationship to another table\n    -- relationship to another table\n    -- relationship to another table",
+      "execution_time_seconds": 25.9305,
+      "exact_match": false,
+      "normalized_match": false
+    },
+    {
+      "id": "test_16",
+      "prompt": "Create an employee table with employee_id as the primary key, name as varchar(100), and department_id as an integer. Also create a department table with department_id as the primary key and department_name as varchar(100), and relate employee.department_id to department.department_id.",
+      "expected_sql": "CREATE TABLE department (department_id INTEGER PRIMARY KEY, department_name VARCHAR(100));\nCREATE TABLE employee (employee_id INTEGER PRIMARY KEY, name VARCHAR(100), department_id INTEGER, FOREIGN KEY (department_id) REFERENCES department(department_id));",
+      "llm_response": "Certainly! Below is the SQL code to create the `employee` and `department` tables with the specified relationships.\n\n### Employee Table\n```sql\nCREATE TABLE employee (\n    employee_id INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(100) NOT NULL,\n    department_id INT NOT NULL,\n    FOREIGN KEY (department_id) REFERENCES department(department_id)\n);\n```\n\n### Department Table",
+      "execution_time_seconds": 26.7311,
+      "exact_match": false,
+      "normalized_match": false
+    }
+  ]
+}

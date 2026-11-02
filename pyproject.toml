@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "light-weight-llm-service"
+version = "0.1.0"
+description = "Dual-model LLM service supporting both custom SLM and Qwen ONNX"
+readme = "README.md"
+authors = ["Pragatheeswaran-sv <pragatheeswaran.s@mitrahsoft.in>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+fastapi = "^0.141.1"
+uvicorn = {extras = ["standard"], version = "^0.52.3"}
+python-dotenv = "^1.2.3"
+onnxruntime = "^1.31.0"
+tokenizers = ">=0.22.0,<0.23.0"
+numpy = ">=1.26.0"
+transformers = ">=4.57.0"
+optimum-onnx = ">=0.1.0"
+datasets = ">=3.0.0"
+pandas = "^3.1.0"
+openpyxl = "^3.1.5"
+
+[tool.poetry.group.dev.dependencies]
+torch = ">=2.0.0"
+pytest = "^8.3.0"
+httpx = "^0.28.0"
+onnxscript = "^0.7.2"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

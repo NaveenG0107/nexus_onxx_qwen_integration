@@ -1,0 +1,15 @@
+# Core API and Web Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+python-dotenv>=1.0.0
+
+# Inference Engines & Tokenization
+onnxruntime>=1.18.0
+tokenizers>=0.20.0,<0.23.0
+numpy>=1.26.0
+
+# Foundation Model Support (Qwen ONNX)
+transformers>=4.45.0
+optimum[onnxruntime]>=1.20.0
+pandas

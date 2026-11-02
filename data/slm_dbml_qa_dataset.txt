@@ -1,0 +1,442 @@
+Prompt: create table users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a new table called users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create users table
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a table named users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a users table with id, name, email and age
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create table users with id int primary key, name varchar, email varchar, age int
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: make a users table
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: I need a users table
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: generate DBML for a users table
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: define a table called users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: add a new table named users to the schema
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a table for storing users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a user information table named users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create users table with the default columns
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a basic users table
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a user table with id and name
+Answer: Table user {
+  id int [pk]
+  name varchar
+}<eos>
+
+Prompt: create users with id and email
+Answer: Table users {
+  id int [pk]
+  email varchar
+}<eos>
+
+Prompt: create a users table with id, name, and email
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+}<eos>
+
+Prompt: create users table with id and age only
+Answer: Table users {
+  id int [pk]
+  age int
+}<eos>
+
+Prompt: create a users table with name, email, age and id primary key
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create users table with id as integer primary key, name as varchar, email as varchar, and age as integer
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create table users with id auto increment primary key, name, email and age
+Answer: Table users {
+  id int [pk, increment]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create users table where email is unique
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar [unique]
+  age int
+}<eos>
+
+Prompt: create users table with required name and email
+Answer: Table users {
+  id int [pk]
+  name varchar [not null]
+  email varchar [not null]
+  age int
+}<eos>
+
+Prompt: create users table with id, name, email, age, and created_at
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  created_at datetime
+}<eos>
+
+Prompt: create users table with phone number too
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  phone varchar
+}<eos>
+
+Prompt: create users table with id, full_name, email_address and age
+Answer: Table users {
+  id int [pk]
+  full_name varchar
+  email_address varchar
+  age int
+}<eos>
+
+Prompt: add phone varchar column to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  phone varchar
+}<eos>
+
+Prompt: add a phone number field to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  phone varchar
+}<eos>
+
+Prompt: add created_at datetime to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  created_at datetime
+}<eos>
+
+Prompt: add is_active boolean to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  is_active boolean
+}<eos>
+
+Prompt: add address varchar column to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  address varchar
+}<eos>
+
+Prompt: add date_of_birth date to users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+  date_of_birth date
+}<eos>
+
+Prompt: add a unique constraint to the email column in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar [unique]
+  age int
+}<eos>
+
+Prompt: make the email column unique in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar [unique]
+  age int
+}<eos>
+
+Prompt: make name not null in users
+Answer: Table users {
+  id int [pk]
+  name varchar [not null]
+  email varchar
+  age int
+}<eos>
+
+Prompt: change age column type to bigint in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age bigint
+}<eos>
+
+Prompt: change users age datatype from int to bigint
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age bigint
+}<eos>
+
+Prompt: rename name column to full_name in users
+Answer: Table users {
+  id int [pk]
+  full_name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: rename email column to email_address in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email_address varchar
+  age int
+}<eos>
+
+Prompt: rename age column to user_age in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  user_age int
+}<eos>
+
+Prompt: remove phone column from users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: drop the phone column from users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: remove address from users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: drop the age column from users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+}<eos>
+
+Prompt: remove email column from users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  age int
+}<eos>
+
+Prompt: change the table name from users to app_users
+Answer: Table app_users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: rename users table to app_users
+Answer: Table app_users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: change table users name to app_users
+Answer: Table app_users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: rename the users table as app_users
+Answer: Table app_users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: drop users table
+Answer: DROP TABLE users;<eos>
+
+Prompt: drop table users
+Answer: DROP TABLE users;<eos>
+
+Prompt: delete the users table
+Answer: DROP TABLE users;<eos>
+
+Prompt: remove users table from schema
+Answer: DROP TABLE users;<eos>
+
+Prompt: delete table named users
+Answer: DROP TABLE users;<eos>
+
+Prompt: remove the table called users
+Answer: DROP TABLE users;<eos>
+
+Prompt: drop the users table completely
+Answer: DROP TABLE users;<eos>
+
+Prompt: make id the primary key in users
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: set users id as primary key
+Answer: Table users {
+  id int [pk]
+  name varchar
+  email varchar
+  age int
+}<eos>
+
+Prompt: create a user table with id and name only
+Answer: Table user {
+  id int [pk]
+  name varchar
+}<eos>
+

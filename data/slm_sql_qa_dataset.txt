@@ -1,0 +1,189 @@
+Prompt: Create a products table
+Answer: CREATE TABLE products (id INT PRIMARY KEY, name VARCHAR(100), price DECIMAL(10,2), stock INT);<eos>
+
+Prompt: Create table products
+Answer: CREATE TABLE products (id INT PRIMARY KEY, name VARCHAR(100), price DECIMAL(10,2), stock INT);<eos>
+
+Prompt: Create an orders table
+Answer: CREATE TABLE orders (id INT PRIMARY KEY, user_id INT, total_amount DECIMAL(10,2), status VARCHAR(50));<eos>
+
+Prompt: Create table orders
+Answer: CREATE TABLE orders (id INT PRIMARY KEY, user_id INT, total_amount DECIMAL(10,2), status VARCHAR(50));<eos>
+
+Prompt: Create table hotels
+Answer: CREATE TABLE hotels (hotel_id INT PRIMARY KEY, name VARCHAR(100), location VARCHAR(100), stars INT);<eos>
+
+Prompt: Create a hotels table
+Answer: CREATE TABLE hotels (hotel_id INT PRIMARY KEY, name VARCHAR(100), location VARCHAR(100), stars INT);<eos>
+
+Prompt: Create an employees table
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100), salary INT);<eos>
+
+Prompt: Create a table named employees with id, name, department, and salary
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100), salary INT);<eos>
+
+Prompt: Create an employees table with id and name only
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100));<eos>
+
+Prompt: Create an employees table with id and department
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, department VARCHAR(100));<eos>
+
+Prompt: Create an employees table with an auto increment id
+Answer: CREATE TABLE employees (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), department VARCHAR(100), salary INT);<eos>
+
+Prompt: Create an employees table where department must be unique
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100) UNIQUE, salary INT);<eos>
+
+Prompt: Create an employees table with name and department required
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100) NOT NULL, department VARCHAR(100) NOT NULL, salary INT);<eos>
+
+Prompt: Create an employees table with a default salary of 18
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100), salary INT DEFAULT 18);<eos>
+
+Prompt: Create an employees table with a phone column
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100), salary INT, phone VARCHAR(20));<eos>
+
+Prompt: Create an employees table with created_at timestamp
+Answer: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department VARCHAR(100), salary INT, created_at TIMESTAMP);<eos>
+
+Prompt: Add a phone column to employees
+Answer: ALTER TABLE employees ADD COLUMN phone VARCHAR(20);<eos>
+
+Prompt: Add an address column to the employees table
+Answer: ALTER TABLE employees ADD COLUMN address VARCHAR(255);<eos>
+
+Prompt: Add a date_of_birth column to employees
+Answer: ALTER TABLE employees ADD COLUMN date_of_birth DATE;<eos>
+
+Prompt: Add an is_active boolean column to employees
+Answer: ALTER TABLE employees ADD COLUMN is_active BOOLEAN;<eos>
+
+Prompt: Add a created_at timestamp column to employees
+Answer: ALTER TABLE employees ADD COLUMN created_at TIMESTAMP;<eos>
+
+Prompt: Add a salary decimal column to employees
+Answer: ALTER TABLE employees ADD COLUMN salary DECIMAL(10,2);<eos>
+
+Prompt: Add a gender column to employees
+Answer: ALTER TABLE employees ADD COLUMN gender VARCHAR(20);<eos>
+
+Prompt: Add a city column to employees
+Answer: ALTER TABLE employees ADD COLUMN city VARCHAR(100);<eos>
+
+Prompt: Add a profile_description text column to employees
+Answer: ALTER TABLE employees ADD COLUMN profile_description TEXT;<eos>
+
+Prompt: Add a last_login datetime column to employees
+Answer: ALTER TABLE employees ADD COLUMN last_login DATETIME;<eos>
+
+Prompt: Remove the phone column from employees
+Answer: ALTER TABLE employees DROP COLUMN phone;<eos>
+
+Prompt: Drop the address column from employees
+Answer: ALTER TABLE employees DROP COLUMN address;<eos>
+
+Prompt: Delete the salary column from employees
+Answer: ALTER TABLE employees DROP COLUMN salary;<eos>
+
+Prompt: Remove the gender column from the employees table
+Answer: ALTER TABLE employees DROP COLUMN gender;<eos>
+
+Prompt: Drop the city column from employees
+Answer: ALTER TABLE employees DROP COLUMN city;<eos>
+
+Prompt: Remove the created_at column from employees
+Answer: ALTER TABLE employees DROP COLUMN created_at;<eos>
+
+Prompt: Change the name column to VARCHAR(150)
+Answer: ALTER TABLE employees MODIFY COLUMN name VARCHAR(150);<eos>
+
+Prompt: Change the department column to VARCHAR(320)
+Answer: ALTER TABLE employees MODIFY COLUMN department VARCHAR(320);<eos>
+
+Prompt: Change the salary column type to BIGINT
+Answer: ALTER TABLE employees MODIFY COLUMN salary BIGINT;<eos>
+
+Prompt: Change the salary column type to SMALLINT
+Answer: ALTER TABLE employees MODIFY COLUMN salary SMALLINT;<eos>
+
+Prompt: Change the name column to TEXT
+Answer: ALTER TABLE employees MODIFY COLUMN name TEXT;<eos>
+
+Prompt: Make the name column NOT NULL
+Answer: ALTER TABLE employees MODIFY COLUMN name VARCHAR(100) NOT NULL;<eos>
+
+Prompt: Make the department column NOT NULL
+Answer: ALTER TABLE employees MODIFY COLUMN department VARCHAR(100) NOT NULL;<eos>
+
+Prompt: Remove the NOT NULL constraint from the name column
+Answer: ALTER TABLE employees MODIFY COLUMN name VARCHAR(100) NULL;<eos>
+
+Prompt: Set the default salary to 18
+Answer: ALTER TABLE employees ALTER COLUMN salary SET DEFAULT 18;<eos>
+
+Prompt: Remove the default value from salary
+Answer: ALTER TABLE employees ALTER COLUMN salary DROP DEFAULT;<eos>
+
+Prompt: Add a unique constraint to the department column
+Answer: ALTER TABLE employees ADD CONSTRAINT uq_employees_department UNIQUE (department);<eos>
+
+Prompt: Make department unique in the employees table
+Answer: ALTER TABLE employees ADD CONSTRAINT uq_employees_department UNIQUE (department);<eos>
+
+Prompt: Add a primary key to the id column in employees
+Answer: ALTER TABLE employees ADD CONSTRAINT pk_employees PRIMARY KEY (id);<eos>
+
+Prompt: Drop the unique constraint named uq_employees_department
+Answer: ALTER TABLE employees DROP CONSTRAINT uq_employees_department;<eos>
+
+Prompt: Remove the primary key from employees
+Answer: ALTER TABLE employees DROP PRIMARY KEY;<eos>
+
+Prompt: Rename employees table to app_employees
+Answer: ALTER TABLE employees RENAME TO app_employees;<eos>
+
+Prompt: Change the table name employees to app_employees
+Answer: ALTER TABLE employees RENAME TO app_employees;<eos>
+
+Prompt: Rename the employees table as registered_employees
+Answer: ALTER TABLE employees RENAME TO registered_employees;<eos>
+
+Prompt: Change employees table name to customer_employees
+Answer: ALTER TABLE employees RENAME TO customer_employees;<eos>
+
+Prompt: Rename registered_employees back to employees
+Answer: ALTER TABLE registered_employees RENAME TO employees;<eos>
+
+Prompt: Rename the name column to full_name in employees
+Answer: ALTER TABLE employees RENAME COLUMN name TO full_name;<eos>
+
+Prompt: Rename department to department_address in employees
+Answer: ALTER TABLE employees RENAME COLUMN department TO department_address;<eos>
+
+Prompt: Rename salary to user_salary in employees
+Answer: ALTER TABLE employees RENAME COLUMN salary TO user_salary;<eos>
+
+Prompt: Rename the phone column to mobile_number in employees
+Answer: ALTER TABLE employees RENAME COLUMN phone TO mobile_number;<eos>
+
+Prompt: Rename created_at to registration_date in employees
+Answer: ALTER TABLE employees RENAME COLUMN created_at TO registration_date;<eos>
+
+Prompt: Drop the employees table
+Answer: DROP TABLE employees;<eos>
+
+Prompt: Delete the employees table
+Answer: DROP TABLE employees;<eos>
+
+Prompt: Remove the employees table from the database
+Answer: DROP TABLE employees;<eos>
+
+Prompt: Delete table named employees permanently
+Answer: DROP TABLE employees;<eos>
+
+Prompt: Drop the employees table if it exists
+Answer: DROP TABLE IF EXISTS employees;<eos>
+
+Prompt: Remove the employees table only if it exists
+Answer: DROP TABLE IF EXISTS employees;<eos>
+

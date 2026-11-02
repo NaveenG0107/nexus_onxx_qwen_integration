@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / distribution
+dist/
+build/
+*.egg-info/
+
+# Large Model files & Cache
+models/
+src/models/
+*.onnx
+*.onnx_data
+*.zip
+.cache/
+*.xlsx
+
+# Poetry (keep poetry.lock committed)
+poetry.toml
