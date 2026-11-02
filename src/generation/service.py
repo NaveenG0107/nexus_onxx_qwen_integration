@@ -557,10 +557,14 @@ class QwenONNXService:
             ) from e
 
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_dir)
+        session_opts = ort.SessionOptions()
+        session_opts.graph_optimization_level = ort.GraphOptimizationLevel.ORT_DISABLE_ALL
+
         self.model = ORTModelForCausalLM.from_pretrained(
             self.model_dir,
             subfolder="onnx",
             file_name="model_q4f16.onnx",
+            session_options=session_opts,
         )
         logger.info("Qwen ONNX model loaded successfully.")
 
